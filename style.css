@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    outline: none;
+    border: none;
+    transition: .2s all ease;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav{
+    width: 100%;
+    padding: 1.5rem 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, rgb(0, 0, 0), rgb(53, 16, 16));
+    animation: tes .5s linear forwards, background 1s ease-out alternate infinite;
+    opacity: 0;
+    overflow: hidden;
+}
+
+
+@keyframes tes {
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes background {
+    100%{
+        filter: hue-rotate(200deg);
+        /* transform: rotateZ(360deg); */
+    }
+}
+
+nav .logo{
+    top: 20rem;
+    color: white;
+    font-size: 27px;
+    font-weight: 600;
+}
+
+nav .logo span{
+    color: red;
+}
+
+nav ul li{
+    display: inline-block;
+    animation: tess .5s ease-in-out forwards;
+    animation-delay: calc(.2s * var(--i));
+    transform: translateX(-200px);
+    opacity: 0;
+}
+
+@keyframes tess {
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+nav ul li a{
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-weight: 500;
+    padding: 1rem 1.5rem;
+}
+
+nav ul li a:hover{
+    color: red;
+}
+
+
+.slider ul{
+    width: calc(500px * 3);
+    height: 100%;
+    display: flex;
+    color: black;
+}
+.slider ul li{
+    position: relative;
+    animation: slider 10s infinite;
+}
+.slider ul li img{
+    width: 500px;
+    height: 300px;
+}
+
+@keyframes slider {
+    0%{
+        left: 0;
+    }
+    25%{
+        left: 0;
+    }
+    35%{
+        left: -500px;
+    }
+    55%{
+        left: -500px;
+    }
+    65%{
+        left: calc(-500px * 2);
+    }
+}
+.p {
+    color: black;
+    background-color: rgb(0, 0, 0);
+
+}
